@@ -1,36 +1,27 @@
-# Pokédex Angular
+# Tutorial de Creación de Cuenta en Vercel - PokéDex
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![codecov](https://codecov.io/gh/keilermora/pokedex-angular/branch/master/graph/badge.svg?token=9E0D28IOFT)](https://codecov.io/gh/keilermora/pokedex-angular)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+Este documento describe de manera detallada el procedimiento para el registro y configuración inicial de la cuenta en la nube pública Vercel, utilizada para el despliegue de la aplicación PokéDex.
 
-[https://keilermora.github.io/pokedex-angular/](https://keilermora.github.io/pokedex-angular/)
+## Proveedor Seleccionado
+- **Plataforma:** Vercel
+- **Modelo:** Serverless / Frontend Web Hosting 
 
-La aplicación muestra el listado y el detalle de los Pokémon de las primeras 3 generaciones.
+---
 
-La imagen que representa un Pokémon en el listado muestra las variaciones que estos tuvieron durante las primeras versiones, desde la versión Green (1996) hasta la version Emerald (2005).
+## Paso 1: Acceso a la Plataforma
+1. Abrir el navegador web e ingresar a la URL oficial: `https://vercel.com/`.
+2. En la esquina superior derecha, seleccionar la opción **Sign Up**.
 
-Los detalles de un Pokémon individual muestra sus estadísticas base y los registros de la Pokédex de las diferentes versiones.
+---
 
-El proyecto fue desarrollado usando la librería de JavaScript [Angular](https://angular.io/) para crear la interfaz de usuario, en comunicación con la Api RESTful [PokéAPI](https://pokeapi.co/).
+## Paso 2: Autenticación e Integración con GitHub
+1. Dentro de las opciones de registro disponibles, seleccionar **Continue with GitHub**.
+2. Autenticarse con la cuenta institucional o personal de GitHub.
+3. Otorgar las autorizaciones de acceso requeridas para que Vercel pueda leer e importar los repositorios de la cuenta.
 
-## Requisitos mínimos
+---
 
-- [Nodejs](https://nodejs.org) con soporte de largo plazo (LTS).
-- Un navegador web
-
-## Ambiente de pruebas
-
-Ejecutar en la raíz del proyecto:
-
-```
-npm start
-```
-
-## Referencias
-
-- [Angular](https://angular.io/): One framework.
-- [Angular Folder Structure](https://angular-folder-structure.readthedocs.io/en/latest/): Create a skeleton structure which is flexible for projects big or small.
-- [Font Awesome](https://fontawesome.com/): The web's most popular icon set and toolkit.
-- [Normalize.css](https://necolas.github.io/normalize.css/): A modern, HTML5-ready alternative to CSS resets.
-- [PokéAPI](https://pokeapi.co/): The RESTful Pokémon API.
+## Paso 3: Verificación del Perfil
+1. Seleccionar la suscripción de tipo **Hobby / Free Tier**.
+2. Confirmar el correo electrónico registrado si la plataforma lo solicita.
+3. Acceder al panel principal (**Dashboard**) donde queda habilitada la capacidad de desplegar nuevos proyectos.
