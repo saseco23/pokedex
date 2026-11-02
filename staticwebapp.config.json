@@ -12,6 +12,6 @@
     "X-Content-Type-Options": "nosniff",
     "Referrer-Policy": "no-referrer",
     "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
-    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://raw.githubusercontent.com https://*.pokeapi.co; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://pokeapi.co https://*.pokeapi.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://assets.pokemon.com https://*.pokeapi.co; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://pokeapi.co https://*.pokeapi.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
   }
 }
