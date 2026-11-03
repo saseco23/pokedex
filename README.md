@@ -11,6 +11,8 @@ Este documento describe de manera detallada el procedimiento para el registro y 
 ## Paso 1: Acceso a la Plataforma
 1. Abrir el navegador web e ingresar a la URL oficial: `https://vercel.com/`.
 2. En la esquina superior derecha, seleccionar la opción **Sign Up**.
+   <img width="787" height="513" alt="image" src="https://github.com/user-attachments/assets/ae544a25-984d-49ae-8ab4-24dd022b1806" />
+
 
 ---
 
