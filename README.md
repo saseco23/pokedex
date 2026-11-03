@@ -10,7 +10,7 @@ Documentación para el despliegue y configuración de la aplicación Angular **P
 - Una cuenta activa en **GitHub**.
 - Navegador web actualizado.
 
-![Requisitos y arquitectura](./assets/requisitos-preview.png)
+![Captura: creacion del grupo de recursos rg-pokedex](capturas/03-grupo-recursos.png)
 
 ---
 
@@ -28,7 +28,7 @@ Documentación para el despliegue y configuración de la aplicación Angular **P
    - **Región:** `(US) East US 2`
 3. Haga clic en **Revisar y crear** y posteriormente en **Crear**.
 
-![Creación del grupo de recursos rg-pokedex](./assets/crear-grupo-recursos.png)
+![Captura: formulario de Static Web App](capturas/05-crear-static-web-app.png)
 
 ---
 
@@ -39,9 +39,3 @@ Documentación para el despliegue y configuración de la aplicación Angular **P
 3. Incluir en la raíz del proyecto los archivos de documentación:
    - `README.md`
    - `Despliegue.md`
-
-> **Nota para StackEdit:**  
-> Si usas **StackEdit** para redactar y sincronizar estos archivos directamente con GitHub:
-> 1. Haz clic en el icono del archivo (esquina superior izquierda) y selecciona **Workspace** > **Sync with GitHub**.
-> 2. Vincula tu repositorio (`tu-usuario/pokedex`) y especifica la ruta del archivo (`README.md` o `Despliegue.md`).
-> 3. Las imágenes deben almacenarse dentro de una carpeta como `assets/` o `img/` dentro del repositorio para garantizar que se visualicen correctamente en GitHub.
