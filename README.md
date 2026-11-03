@@ -1,27 +1,47 @@
-# Tutorial de Creación de Cuenta en Vercel - PokéDex
+# PokéDex - Despliegue en Azure Static Web Apps
 
-Este documento describe de manera detallada el procedimiento para el registro y configuración inicial de la cuenta en la nube pública Vercel, utilizada para el despliegue de la aplicación PokéDex.
-
-## Proveedor Seleccionado
-- **Plataforma:** Vercel
-- **Modelo:** Serverless / Frontend Web Hosting 
+Documentación para el despliegue y configuración de la aplicación Angular **PokéDex** en Azure Static Web Apps.
 
 ---
 
-## Paso 1: Acceso a la Plataforma
-1. Abrir el navegador web e ingresar a la URL oficial: `https://vercel.com/`.
-2. En la esquina superior derecha, seleccionar la opción **Sign Up**.
+## Requisitos previos
+
+- Un correo institucional activo de la universidad (**Tecnológico Comfenalco**).
+- Una cuenta activa en **GitHub**.
+- Navegador web actualizado.
+
+![Requisitos y arquitectura](./assets/requisitos-preview.png)
 
 ---
 
-## Paso 2: Autenticación e Integración con GitHub
-1. Dentro de las opciones de registro disponibles, seleccionar **Continue with GitHub**.
-2. Autenticarse con la cuenta institucional o personal de GitHub.
-3. Otorgar las autorizaciones de acceso requeridas para que Vercel pueda leer e importar los repositorios de la cuenta.
+## 1. Crear el grupo de recursos
+
+> **¿Qué es un Grupo de Recursos?**  
+> Es un contenedor lógico que organiza y administra los recursos asignados a una solución en Azure.
+
+### Pasos en el portal de Azure:
+
+1. En la barra superior de búsqueda del portal de Azure, busque **Grupos de recursos** y haga clic en **Crear**.
+2. Configure los siguientes parámetros:
+   - **Suscripción:** `Azure for Students`
+   - **Nombre del grupo de recursos:** `rg-pokedex`
+   - **Región:** `(US) East US 2`
+3. Haga clic en **Revisar y crear** y posteriormente en **Crear**.
+
+![Creación del grupo de recursos rg-pokedex](./assets/crear-grupo-recursos.png)
 
 ---
 
-## Paso 3: Verificación del Perfil
-1. Seleccionar la suscripción de tipo **Hobby / Free Tier**.
-2. Confirmar el correo electrónico registrado si la plataforma lo solicita.
-3. Acceder al panel principal (**Dashboard**) donde queda habilitada la capacidad de desplegar nuevos proyectos.
+## 2. Preparar el repositorio en GitHub
+
+1. Crear un repositorio público llamado `pokedex` en su cuenta de GitHub.
+2. Subir el código fuente de la aplicación Angular a la rama principal (`main`).
+3. Incluir en la raíz del proyecto los archivos de documentación:
+   - `README.md`
+   - `Despliegue.md`
+
+> **Nota para StackEdit:**  
+> Si usas **StackEdit** para redactar y sincronizar estos archivos directamente con GitHub:
+> 1. Haz clic en el icono del archivo (esquina superior izquierda) y selecciona **Workspace** > **Sync with GitHub**.
+> 2. Vincula tu repositorio (`tu-usuario/pokedex`) y especifica la ruta del archivo (`README.md` o `Despliegue.md`).
+> 3. Las imágenes deben almacenarse dentro de una carpeta como `assets/` o `img/` dentro del repositorio para garantizar que se visualicen correctamente en GitHub.
