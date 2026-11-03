@@ -11,17 +11,16 @@ Documentación del proceso de creación del recurso en Azure y despliegue contin
 
 ### Datos básicos y hospedaje:
 - **Suscripción:** `Azure for Students`
-- **Grupo de recursos:** Seleccionar el grupo previamente creado (ej. `rg-pokedex`)
-- **Regiones:** `Global`
+- **Grupo de recursos:** Seleccionar el grupo previamente creado `rg-pokedex`
 
-![Configuración básica del recurso en Azure](./assets/azure-static-webapp-form1.png)
+![Configuración básica del recurso en Azure](capturas/datos_basicos.png)
 
 ### Detalles de la aplicación y la implementación:
 - **Nombre:** `stapp-pokedex` *(o el nombre deseado)*
 - **Tipo de plan:** `Gratis: para aficiones o proyectos personales` *(o Estándar según los requerimientos)*
 - **Origen:** `GitHub` (Inicie sesión con su cuenta y seleccione el repositorio `pokedex` y la rama `main`).
 
-![Detalles de hospedaje e integración con GitHub](./assets/azure-static-webapp-form2.png)
+![Detalles de hospedaje e integración con GitHub](capturas/datos_basico_2.png)
 
 3. Haga clic en **Revisar y crear** y posteriormente en **Crear**.
 
