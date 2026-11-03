@@ -1,36 +1,37 @@
-# Guía de Despliegue y Configuración de Seguridad de PokéDex
+# Despliegue de PokéDex en Azure Static Web Apps
 
-
-## 1. Repositorio de Código Fuente
-- **Repositorio en GitHub:** `pokedex`
-- **Ramificación Principal:** `main`
-- **Tecnología Base:** Angular Framework
+Documentación del proceso de creación del recurso en Azure y despliegue continuo mediante GitHub Actions.
 
 ---
 
-## 2. Proceso de Despliegue en la Nube (Vercel)
-1. Iniciar sesión en la consola de Vercel (`https://vercel.com/`).
-2. Hacer clic en **Add New...** y seleccionar la opción **Project**.
-3. Seleccionar el repositorio `pokedex` dentro del listado de proyectos vinculados desde GitHub.
-4. En el panel de configuración de construcción (*Build & Output Settings*):
-   - **Framework Preset:** Angular (detectado automáticamente).
-   - **Comando de compilación:** `npm run build`
-   - **Directorio de salida:** `dist/pokedex-angular`
-5. Ejecutar el botón **Deploy** para iniciar la compilación e integración continua.
+## 1. Crear el recurso Static Web App
+
+1. En el portal de Azure, busque **Static Web Apps** en la barra superior y haga clic en **Crear**.
+2. Complete el formulario con los siguientes parámetros:
+
+### Datos básicos y hospedaje:
+- **Suscripción:** `Azure for Students`
+- **Grupo de recursos:** Seleccionar el grupo previamente creado (ej. `rg-pokedex`)
+- **Regiones:** `Global`
+
+![Configuración básica del recurso en Azure](./assets/azure-static-webapp-form1.png)
+
+### Detalles de la aplicación y la implementación:
+- **Nombre:** `stapp-pokedex` *(o el nombre deseado)*
+- **Tipo de plan:** `Gratis: para aficiones o proyectos personales` *(o Estándar según los requerimientos)*
+- **Origen:** `GitHub` (Inicie sesión con su cuenta y seleccione el repositorio `pokedex` y la rama `main`).
+
+![Detalles de hospedaje e integración con GitHub](./assets/azure-static-webapp-form2.png)
+
+3. Haga clic en **Revisar y crear** y posteriormente en **Crear**.
 
 ---
 
-## 3. Configuración de Encabezados de Seguridad (HTTP Headers)
-Para prevenir ataques comunes y cumplir con los requisitos de ciberseguridad de Pueblo Paleta Inc., se incorporó el archivo `vercel.json` en la raíz del proyecto. Este archivo inyecta los siguientes encabezados HTTP:
+## 2. Sincronizar el workflow generado en el repositorio local
 
-- **Strict-Transport-Security (HSTS):** Forzamiento de conexiones mediante HTTPS seguro.
-- **X-Frame-Options (DENY):** Prevención de ataques de Clickjacking.
-- **X-Content-Type-Options (nosniff):** Protección contra la interpretación inadecuada de tipos MIME.
-- **Referrer-Policy (no-referrer):** Control de la información enviada en las peticiones salientes.
-- **Permissions-Policy:** Restricción de APIs del navegador (cámara, micrófono, geolocalización).
-- **Content-Security-Policy (CSP):** Declaración explícita de orígenes permitidos para scripts, estilos y la conexión a PokéAPI (`https://pokeapi.co`).
+Azure agrega automáticamente al repositorio un archivo de workflow de GitHub Actions en la ruta `.github/workflows/azure-static-web-apps-....yml`. 
 
----
+Para descargar los cambios generados por Azure a su equipo local, ejecute en su terminal:
 
-## 4. Auditoría de Seguridad
-El enlace público generado por la plataforma (`https://pokedex-psi-steel.vercel.app/`) fue auditado en la herramienta **Security Headers** (`https://securityheaders.com/`), obteniendo la máxima calificación posible.
+```bash
+git pull origin main
